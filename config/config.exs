@@ -9,7 +9,7 @@ use Mix.Config
 config :digiramp, Digiramp.Endpoint,
   url: [host: "localhost"],
   root: Path.dirname(__DIR__),
-  secret_key_base: "MfiXSPhVYs/Wr7ERsyg6vKECHALV4hv3zxVUuI+nvTcqWaU32GUwjYjvuQ+Sio/1",
+  secret_key_base: "XMzok4rjYgZO0zfzgN7DAet/pGEZNraRRmQKpKQkjbG56FM+fRcNZ+6IHDo64j8G",
   render_errors: [accepts: ~w(html json)],
   pubsub: [name: Digiramp.PubSub,
            adapter: Phoenix.PubSub.PG2]

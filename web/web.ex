@@ -28,7 +28,7 @@ defmodule Digiramp.Web do
 
       alias Digiramp.Repo
       import Ecto.Model
-      import Ecto.Query, only: [from: 2]
+      import Ecto.Query, only: [from: 1, from: 2]
 
       import Digiramp.Router.Helpers
     end
@@ -60,7 +60,7 @@ defmodule Digiramp.Web do
 
       alias Digiramp.Repo
       import Ecto.Model
-      import Ecto.Query, only: [from: 2]
+      import Ecto.Query, only: [from: 1, from: 2]
 
     end
   end

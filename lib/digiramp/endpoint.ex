@@ -33,7 +33,7 @@ defmodule Digiramp.Endpoint do
   plug Plug.Session,
     store: :cookie,
     key: "_digiramp_key",
-    signing_salt: "X06RDAhI"
+    signing_salt: "CpM6q4KN"
 
   plug Digiramp.Router
 end
