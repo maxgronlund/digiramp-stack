@@ -1,8 +1,9 @@
 <div class="jumbotron">
-  <h2>Welcome to Phoenix!</h2>
+  <h2>Welcome to DigiRAMP</h2>
   <p class="lead">A productive web framework that<br />does not compromise speed and maintainability.</p>
 </div>
 
+<!--
 <div class="row marketing">
   <div class="col-lg-6">
     <h4>Resources</h4>
@@ -34,3 +35,4 @@
     </ul>
   </div>
 </div>
+-->
