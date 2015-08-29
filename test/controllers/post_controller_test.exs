@@ -68,4 +68,11 @@ defmodule Digiramp.PostControllerTest do
     assert redirected_to(conn) == post_path(conn, :index)
     refute Repo.get(Post, post.id)
   end
+  
+  test "shows an image for the post", %{conn: conn} do
+      post = Repo.insert! %Post{image_url: "http://fc00.deviantart.net/fs71/i/2012/176/8/f/marvin_the_paranoid_android_by_wouthezx-d54uny0.jpg"}
+      conn = get conn, post_path(conn, :show, post)
+      assert html_response(conn, 200) =~ "Show post"
+      assert html_response(conn, 200) =~ "<img src='http://fc00.deviantart.net/fs71/i/2012/176/8/f/marvin_the_paranoid_android_by_wouthezx-d54uny0.jpg' />"
+  end
 end

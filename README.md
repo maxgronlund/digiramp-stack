@@ -17,3 +17,5 @@ Ready to run in production? Please [check our deployment guides](http://www.phoe
   * Docs: http://hexdocs.pm/phoenix
   * Mailing list: http://groups.google.com/group/phoenix-talk
   * Source: https://github.com/phoenixframework/phoenix
+
+[![Build Status](https://semaphoreci.com/api/v1/projects/a8e53317-ff17-494e-99d7-cc31cb368aa0/525713/badge.svg)](https://semaphoreci.com/synthmax/digiramp-stack)
