@@ -1,26 +1,16 @@
-<h2>Show user</h2>
+<h2><%= @user.name %></h2>
+
+<img src="<%= Digiramp.Avatar.url({@user.avatar, @user}, :thumb) %>" class="img-thumbnail">
 
 <ul>
-
-  <li>
-    <strong>Name:</strong>
-    <%= @user.name %>
-  </li>
+  
 
   <li>
     <strong>Email:</strong>
     <%= @user.email %>
   </li>
 
-  <li>
-    <strong>Bio:</strong>
-    <%= @user.bio %>
-  </li>
-
-  <li>
-    <strong>Number of pets:</strong>
-    <%= @user.number_of_pets %>
-  </li>
+ 
 
 </ul>
 

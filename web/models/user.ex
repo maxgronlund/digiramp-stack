@@ -1,17 +1,17 @@
 defmodule Digiramp.User do
   use Digiramp.Web, :model
-
+  use Arc.Ecto.Model
+  #scope = Repo.get(User, 1)
   schema "users" do
     field :name, :string
     field :email, :string
-    field :bio, :string
-    field :number_of_pets, :integer
+    field :avatar, Digiramp.Avatar.Type
 
     timestamps
   end
 
-  @required_fields ~w(name email bio number_of_pets)
-  @optional_fields ~w()
+  @required_fields ~w(name email)
+  @optional_fields ~w(avatar)
 
   @doc """
   Creates a changeset based on the `model` and `params`.

@@ -18,7 +18,8 @@ defmodule Digiramp.Mixfile do
   def application do
     [mod: {Digiramp, []},
      applications: [:phoenix, :phoenix_html, :cowboy, :logger,
-                    :phoenix_ecto, :postgrex]]
+                    :phoenix_ecto, :postgrex, :erlcloud, :arc
+                    ]]
   end
 
   # Specifies which paths to compile per environment
@@ -34,6 +35,8 @@ defmodule Digiramp.Mixfile do
      {:postgrex, ">= 0.0.0"},
      {:phoenix_html, "~> 2.1"},
      {:phoenix_live_reload, "~> 1.0", only: :dev},
-     {:cowboy, "~> 1.0"}]
+     {:cowboy, "~> 1.0"},
+     {:arc, "~> 0.1.1"},
+     {:arc_ecto, "~> 0.1.2"}]
   end
 end

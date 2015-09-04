@@ -3,6 +3,8 @@ defmodule Digiramp.UserController do
 
   alias Digiramp.User
 
+  
+
   plug :scrub_params, "user" when action in [:create, :update]
 
   def index(conn, _params) do
@@ -16,6 +18,9 @@ defmodule Digiramp.UserController do
   end
 
   def create(conn, %{"user" => user_params}) do
+    IO.inspect user_params
+    #Avatar.store({%Plug.Upload{}, scope})
+    
     changeset = User.changeset(%User{}, user_params)
 
     case Repo.insert(changeset) do
@@ -35,14 +40,16 @@ defmodule Digiramp.UserController do
 
   def edit(conn, %{"id" => id}) do
     user = Repo.get!(User, id)
+    #Avatar.store({%Plug.Upload{}, user})
     changeset = User.changeset(user)
     render(conn, "edit.html", user: user, changeset: changeset)
   end
 
   def update(conn, %{"id" => id, "user" => user_params}) do
-    user = Repo.get!(User, id)
+    user      = Repo.get!(User, id)
     changeset = User.changeset(user, user_params)
-
+    
+    
     case Repo.update(changeset) do
       {:ok, user} ->
         conn
