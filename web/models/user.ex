@@ -22,5 +22,13 @@ defmodule Digiramp.User do
   def changeset(model, params \\ :empty) do
     model
     |> cast(params, @required_fields, @optional_fields)
+    |> validate_format(:email, ~r/^[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,4}$/)
+    |> validate_length(:username, min: 5)
+    |> validate_length(:username, max: 50)
+    |> update_change(:email, &String.downcase/1)
+    |> unique_constraint(:email)
+    #|> validate_unique(:email, on: User.Repo, downcase: true)
+    #|> unique_constraint(:email)
+   
   end
 end

@@ -3,7 +3,7 @@ defmodule Digiramp.UserTest do
 
   alias Digiramp.User
 
-  @valid_attrs %{bio: "some content", email: "some content", name: "some content", number_of_pets: 42}
+  @valid_attrs %{ email: "john@doe.com", name: "some content"}
   @invalid_attrs %{}
 
   test "changeset with valid attributes" do

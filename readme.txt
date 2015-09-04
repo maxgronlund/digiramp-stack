@@ -48,3 +48,19 @@ user select an avatar and hits save
 --------------------------
 Environment variables
 Application.get_env(:arc, :access_key_id)
+
+
+--------------------------
+ecto
+validation
+http://hexdocs.pm/ecto/Ecto.Changeset.html
+
+SQL
+def change do
+    execute "ALTER TABLE users RENAME COLUMN avatar_url TO avatar"
+end
+
+--------------------------
+todo
+http://nithinbekal.com/posts/phoenix-authentication/
+
