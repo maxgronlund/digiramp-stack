@@ -2,7 +2,7 @@ defmodule Digiramp.UserControllerTest do
   use Digiramp.ConnCase
 
   alias Digiramp.User
-  @valid_attrs %{bio: "some content", email: "some content", name: "some content", number_of_pets: 42}
+  @valid_attrs %{ email: "john@doe.com", name: "John doe"}
   @invalid_attrs %{}
 
   setup do
@@ -67,5 +67,12 @@ defmodule Digiramp.UserControllerTest do
     conn = delete conn, user_path(conn, :delete, user)
     assert redirected_to(conn) == user_path(conn, :index)
     refute Repo.get(User, user.id)
+  end
+  
+  test "shows an image for the user", %{conn: conn} do
+    user = Repo.insert! %User{ avatar: "http://fc00.deviantart.net/fs71/i/2012/176/8/f/marvin_the_paranoid_android_by_wouthezx-d54uny0.jpg"}
+    #conn = get conn, user_path(conn, :show, user)
+    #assert html_response(conn, 200) =~ "Show post"
+    #assert html_response(conn, 200) =~ "<img src='http://fc00.deviantart.net/fs71/i/2012/176/8/f/marvin_the_paranoid_android_by_wouthezx-d54uny0.jpg' />"
   end
 end
