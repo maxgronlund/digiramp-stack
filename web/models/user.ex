@@ -1,7 +1,7 @@
 defmodule Digiramp.User do
   use Digiramp.Web, :model
   use Arc.Ecto.Model
-  #scope = Repo.get(User, 1)
+  
   schema "users" do
     field :name, :string
     field :email, :string
@@ -27,8 +27,5 @@ defmodule Digiramp.User do
     |> validate_length(:username, max: 50)
     |> update_change(:email, &String.downcase/1)
     |> unique_constraint(:email)
-    #|> validate_unique(:email, on: User.Repo, downcase: true)
-    #|> unique_constraint(:email)
-   
   end
 end
