@@ -45,7 +45,7 @@ config :arc,
   secret_access_key: System.get_env("AWS_SECRET_ACCESS_KEY"),
   bucket: "digiramp2"
 
-  #
+  
 
   
 
