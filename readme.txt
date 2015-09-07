@@ -68,6 +68,8 @@ http://nithinbekal.com/posts/phoenix-authentication/
 test
 https://semaphoreci.com/synthmax/digiramp-stack
 
+MIX_ENV=test mix phoenix.server
+
 --------------------------
 deploy
 git push heroku master && mix ecto.migrate
