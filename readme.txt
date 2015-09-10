@@ -74,3 +74,11 @@ MIX_ENV=test mix phoenix.server
 deploy
 git push heroku master && mix ecto.migrate
 
+--------------------------
+Cool packages
+https://github.com/doomspork/phoenix_slim
+
+--------------------------
+Must have book
+https://pragprog.com/book/phoenix/programming-phoenix
+

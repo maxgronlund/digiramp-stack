@@ -37,6 +37,7 @@ defmodule Digiramp.Mixfile do
      {:phoenix_live_reload, "~> 1.0", only: :dev},
      {:cowboy, "~> 1.0"},
      {:arc, "~> 0.1.1"},
-     {:arc_ecto, "~> 0.1.2"}]
+     {:arc_ecto, "~> 0.1.2"},
+     {:phoenix_slim, "~> 0.4.1"}]
   end
 end

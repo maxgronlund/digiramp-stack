@@ -1,7 +1,8 @@
-<div class="jumbotron">
-  <h2>Welcome to DigiRAMP</h2>
-  <p class="lead">A productive web framework that<br />does not compromise speed and maintainability.</p>
-</div>
+.jumbotron
+  h2 Welcome to DigiRAMP
+  p.lead
+    'A productive web framework that
+    br/ does not compromise speed and maintainability.
 
 <!--
 <div class="row marketing">
