@@ -18,7 +18,7 @@ defmodule Digiramp.Mixfile do
   def application do
     [mod: {Digiramp, []},
      applications: [:phoenix, :phoenix_html, :cowboy, :logger,
-                    :phoenix_ecto, :postgrex, :erlcloud, :arc
+                    :phoenix_ecto, :postgrex, :erlcloud, :arc 
                     ]]
   end
 
@@ -40,4 +40,6 @@ defmodule Digiramp.Mixfile do
      {:arc_ecto, "~> 0.1.2"},
      {:phoenix_slim, "~> 0.4.1"}]
   end
+  
+  
 end

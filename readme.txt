@@ -82,3 +82,7 @@ https://github.com/doomspork/phoenix_slim
 Must have book
 https://pragprog.com/book/phoenix/programming-phoenix
 
+--------------------------
+Environment variables
+https://github.com/avdi/dotenv_elixir
+

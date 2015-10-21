@@ -1,5 +1,7 @@
 use Mix.Config
 
+
+
 # For development, we disable any cache and enable
 # debugging and code reloading.
 #
@@ -41,9 +43,15 @@ config :digiramp, Digiramp.Repo,
   pool_size: 10
   
 config :arc,
+  bucket: "digiramp2",
   access_key_id: System.get_env("AWS_ACCESS_KEY_ID"),
-  secret_access_key: System.get_env("AWS_SECRET_ACCESS_KEY"),
-  bucket: "digiramp2"
+  secret_access_key: System.get_env("AWS_SECRET_ACCESS_KEY")
+  
+import_config "#{Mix.env}.secret.exs"
+
+
+  
+
 
   
 
